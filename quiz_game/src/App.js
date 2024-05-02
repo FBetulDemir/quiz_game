@@ -19,6 +19,11 @@ function App() {
       setQuizFinished(true);
     }
   };
+
+  if(quizFinished){
+    return
+    <score />
+  }
   
 
   return (
@@ -33,7 +38,14 @@ function App() {
           {QuestionList[currentQuestionIndex].question}
         </div>
         <div className="options-container">
-
+          {QuestionList[currentQuestionIndex].options.map((option) =>(
+          <button 
+              className="answer-btn"
+              key={option}
+              onClick={()=> handleAnswerButtonClick(option)}>
+              {option}  
+          </button>
+          ))}         
         </div>
       </div>
     </div>
