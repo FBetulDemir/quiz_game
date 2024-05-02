@@ -4,17 +4,27 @@ import React from "react";
 
 const Score = ({currentQuestionIndex}) => {
     const [score, setScore] = useState (0);
-    const [scoreBoard, setScoreBoard] = useState (false);
+    
     
 
     const handleAnswerButton = (selectedAnswer) => {
-        const currentQuestion = QuestionList[currentQuestionIndex];
-        if (selectedAnswer === currentQuestion.answer) {
+        
+        if (selectedAnswer === QuestionList[currentQuestionIndex].answer) {
           setScore (score + 1);
         }
       };
       return (
         <div>
+            <div>
+                {QuestionList[currentQuestionIndex].options.map((option) =>(
+                <button 
+                    className="answer-btn"
+                    key={option}
+                    onClick={()=> handleAnswerButton(option)}>
+                    {option}  
+                </button>
+                ))}
+            </div>
             <h2>Results</h2>
             <h4>Your score: {score}</h4>
         </div>
