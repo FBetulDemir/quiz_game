@@ -3,16 +3,22 @@ import QuestionList from "./components/QuestionList";
 import Score from "./components/Score";
 
 function App() {
-
-  const [scoreBoard, setScoreBoard] = useState (false);
+  const [score, setScore] = useState (0);
+  const [quizFinished, setQuizFinished] = useState (false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
-  const nextQuestionIndex = currentQuestionIndex + 1;
-  if (nextQuestionIndex < QuestionList.length) {
-    setCurrentQuestionIndex(nextQuestionIndex);
-  } else {
-    setScoreBoard(true);
-  }
+  const handleAnswerButtonClick = (selectedAnswer) => {  
+    if (selectedAnswer === QuestionList[currentQuestionIndex].answer) {
+      setScore (score + 1);
+    };
+
+    const nextQuestionIndex = currentQuestionIndex + 1;
+    if (nextQuestionIndex < QuestionList.length) {
+      setCurrentQuestionIndex(nextQuestionIndex);
+    } else {
+      setQuizFinished(true);
+    }
+  };
   
 
   return (
