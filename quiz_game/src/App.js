@@ -19,16 +19,14 @@ function App() {
       setQuizFinished(true);
     }
   };
-
-  if(quizFinished){
-    return
-    <score />
+  if (quizFinished ===true){
+    return <Score />
   }
-  
 
   return (
     <div className="App">
       <h1>Quiz App</h1>
+      <></>
       <div className="quiz-app">
         <div className="question-counter">
             <span>Question {currentQuestionIndex + 1}  </span>/ 
@@ -45,7 +43,7 @@ function App() {
               onClick={()=> handleAnswerButtonClick(option)}>
               {option}  
           </button>
-          ))}         
+          ))};         
         </div>
       </div>
     </div>
