@@ -1,5 +1,9 @@
+
 import {useState} from "react";
 import Quiz from "./components/Quiz";
+
+import { Timer } from "./components/Timer";
+
 
 function App() {
   const [score, setScore] = useState (0);
@@ -8,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+
       <div className="quiz-app">
         <div className="quiz-section">
             <Quiz currentQuestionIndex= {currentQuestionIndex} 
@@ -19,6 +24,9 @@ function App() {
             />
         </div>
       </div>
+
+     <Timer/>
+
     </div>
   );
 }
