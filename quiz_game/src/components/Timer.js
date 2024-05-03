@@ -18,16 +18,24 @@ export const Timer = ({ onRestart }) => {
         });
       }, 1000);
     };
-    
+
     countdown();
 
     return () => clearInterval(timerId);
   }, [onRestart]);
+  
+  const restartTimer = () => {
+    clearInterval(timerId);
+    setTimeRemaining(initialTime);
+  };
+
+  const minutes = Math.floor(timeRemaining / 60);
+  const seconds = timeRemaining % 60;
 
   return (
     <div>
       <p>
-       
+        {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
       </p>
     </div>
   );
