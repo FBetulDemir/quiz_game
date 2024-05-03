@@ -1,7 +1,3 @@
-import QuestionList from "./QuestionList";
-import {useState} from "react";
-import React from "react";
-
 const Score = ({score}) => {
       return (
         <div>
