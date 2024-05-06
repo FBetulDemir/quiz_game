@@ -12,7 +12,6 @@ export const Timer = ({ onRestart }) => {
             return prevTime - 1;
           } else {
             clearInterval(timerIdRef.current);
-            onRestart();
             return initialTime;
           }
         });
