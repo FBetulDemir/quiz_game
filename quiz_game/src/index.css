@@ -7,10 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+body
 .restart-buttons {
   opacity: 0.4;
   color: black;
@@ -30,4 +27,5 @@ code {
 .restart-button:hover {
   opacity: 1;
   background-color: rgba(220, 214, 214, 0.908);
+  scale: 1;
 }

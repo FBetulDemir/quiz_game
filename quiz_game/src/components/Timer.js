@@ -24,10 +24,7 @@ export const Timer = ({ onRestart }) => {
     return () => clearInterval(timerIdRef.current);
   }, [onRestart, initialTime]);
   
-  // const restartTimer = () => {
-  //   clearInterval(timerId);
-  //   setTimeRemaining(initialTime);
-  // };
+ 
 
   const minutes = Math.floor(timeRemaining / 60);
   const seconds = timeRemaining % 60;
