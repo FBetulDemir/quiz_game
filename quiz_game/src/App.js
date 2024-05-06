@@ -1,9 +1,13 @@
-import { Timer } from "./components/Timer";
+
+import { Buttons } from "./components/Buttons";
+import "./index.css";
+
 
 function App() {
   return (
     <div className="App">
-     <Timer/>
+    <Buttons/>
+  
     </div>
   );
 }
