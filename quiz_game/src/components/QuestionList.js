@@ -2,7 +2,7 @@ const QuestionList = [
     {
         id: 1,
         question: "Who wrote the novel '1984'?",
-        options: ["George Orwell", "J.K. Rowling", "F. Scott Fitzgerald", "Ernest Hemingway?"],
+        options: ["George Orwell", "J.K. Rowling", "F. Scott Fitzgerald", "Ernest Hemingway"],
         answer: "George Orwell",
     },
     {
