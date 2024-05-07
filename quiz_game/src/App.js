@@ -1,9 +1,7 @@
-
 import {useState} from "react";
 import Quiz from "./components/Quiz";
-
-import { Timer } from "./components/Timer";
-
+import { Buttons } from "./components/Buttons";
+import "./index.css";
 
 function App() {
   const [score, setScore] = useState (0);
@@ -24,9 +22,7 @@ function App() {
             />
         </div>
       </div>
-
-     <Timer/>
-
+<Buttons/>
     </div>
   );
 }
