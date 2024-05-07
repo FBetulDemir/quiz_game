@@ -33,10 +33,10 @@ const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, q
             <div className="question-display">
                 {QuestionList[currentQuestionIndex].question}
             </div>
-            <div className="options-container">
+            <div className="container-buttons">
                 {QuestionList[currentQuestionIndex].options.map((option) =>(
                     <button 
-                        className="answer-btn"
+                        className="buttons"
                         key={option}
                         onClick={()=> handleAnswerButtonClick(option)}>
                         {option}  

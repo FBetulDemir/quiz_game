@@ -5,27 +5,99 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    margin: 0;
+  }
+.score-board {
+  /* h1 */
+    color: white;
+    width: 80%;
+    font-size: 30px;
+    padding: 15px;
+    margin: auto;
+    font-family: "Special Elite", cursive;
+    text-align: center;
+  }
+  .container-buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 600px;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+  }
+  .answer-button,
+  .next-button,
+  .question-display 
+  {
+    width: 600px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    font-family: Inter,sans-serif;
+    font-size: 28px;
+  }
+.buttons{
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-body
-.restart-buttons {
-  opacity: 0.4;
-  color: black;
-  width: 200px;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 10px;
-  margin: 10px;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 10px;
-  margin: 10px;
-  font-family: "Special Elite", cursive;
-  transition: background-color 0.3s ease;
+.buttons:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
 }
-.restart-button:hover {
-  opacity: 1;
-  background-color: rgba(220, 214, 214, 0.908);
-  scale: 1;
+
+.buttons:hover:after {
+  transform: translate(0, 0);
+}
+
+.buttons:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.buttons:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    padding: 0 40px;
+  }
 }

@@ -12,8 +12,8 @@ export const Buttons = ({ onRestart, onEndGame }) => {
     return (
         <div className='restart-buttons'>
         <Timer key={restartKey} onRestart={handleRestart} />
-        <button type="button" onClick={handleRestart}>Restart</button>
-        <button type="button" onClick={onEndGame}>End Game, thanks for your participation</button>
+        <button className="buttons" type="button" onClick={handleRestart}>Restart</button>
+        <button className="buttons" type="button" onClick={onEndGame}>End Game, thanks for your participation</button>
     </div>
     );
 };
