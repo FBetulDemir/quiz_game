@@ -1,11 +1,17 @@
+import { useState } from "react";
 import QuestionList from "./QuestionList";
 import Score from "./Score";
 
 const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, quizFinished, setQuizFinished }) => {
 
+    const [isCorrect, setIsCorrect] = useState(null);
+
     const handleAnswerButtonClick = (selectedAnswer) => {  
         if (selectedAnswer === QuestionList[currentQuestionIndex].answer) {
           setScore (score + 1);
+          setIsCorrect(true);
+        }else{
+          setIsCorrect(false);
         };
     
         const nextQuestionIndex = currentQuestionIndex + 1;
@@ -36,6 +42,9 @@ const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, q
             <div className="options-container">
                 {QuestionList[currentQuestionIndex].options.map((option) =>(
                     <button 
+                        style={{
+                            backgroundColor: option === QuestionList[currentQuestionIndex].answer ? "green": "red"
+                        }}
                         className="answer-btn"
                         key={option}
                         onClick={()=> handleAnswerButtonClick(option)}>
