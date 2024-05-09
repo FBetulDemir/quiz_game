@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 export const Timer = ({ onRestart }) => {
-  const initialTime = 6;
+  const initialTime = 5 * 60;
   const [timeRemaining, setTimeRemaining] = useState(initialTime);
   const timerIdRef = useRef(null);
   useEffect(() => {
@@ -29,9 +29,8 @@ export const Timer = ({ onRestart }) => {
   const seconds = timeRemaining % 60;
 
   return (
-    <div className="timer">
-      <div className="clock"></div>
-      <p >
+    <div>
+      <p>
         {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
       </p>
     </div>
