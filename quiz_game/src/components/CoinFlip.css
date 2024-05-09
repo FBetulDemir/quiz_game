@@ -26,6 +26,7 @@
   .tip-button.clicked .tip-button__text {
     opacity: 0;
     transition: opacity 100ms linear 200ms;
+   
   }
   .tip-button.clicked::before {
     height: 0.5rem;
@@ -53,7 +54,7 @@
     transform: scale(2) translateY(-10px);
   }
   .tip-button__text {
-    color: #fff;
+    color: #111;
     margin-right: 1.8rem;
     opacity: 1;
     position: relative;
@@ -78,7 +79,7 @@
   .tip-button::after {
     bottom: -1rem;
     color: #323234;
-    content: "Thank you!";
+    content: "THANK YOU!";
     height: 190%;
     left: 0;
     opacity: 0;

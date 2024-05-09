@@ -109,7 +109,7 @@ export const CoinFlip = () => {
     
       return (
         <button className="tip-button">
-          <span className="tip-button__text">Send me a tip</span>
+          <span className="tip-button__text">GAME OVER</span>
           <div className="coin-wrapper">
             <div className="coin">
               <div className="coin__middle"></div>

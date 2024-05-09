@@ -14,7 +14,6 @@ export const Buttons = ({ onRestart, onEndGame }) => {
     return (
         <div className='restart-buttons'>
         <button className="buttons" type="button" onClick={handleRestart}>Restart</button>
-       
         <CoinFlip/>
     </div>
     );
