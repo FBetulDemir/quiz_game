@@ -6,57 +6,50 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
- 
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh; 
     margin: 0;
   }
-/* .score-board {
-  /* h1 
-   
-    width: 80%;
-    font-size: 30px;
+.question-counter {
+    display: flex;
+    width: 100%;
+    font-size: 25px;
     padding: 15px;
     margin: auto;
-  
     text-align: center;
-  } */
+    justify-content: center;
+  } 
   .container-buttons {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 600px;
+    width: 650px;
     height: 200px;
-    justify-content: space-around;
+    justify-content: center;
     align-content: space-evenly;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
+    padding: 20px;
   }
   .restart-buttons {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-   
     height: 200px;
     justify-content: space-around;
     align-content: space-evenly;
     display: grid;
-    
-
   }
   .answer-button,
-  .next-button,
-  .question-display 
-  {
+  .question-display{
+    display: flex;
     width: 600px;
-    font-weight: bold;
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
     font-family: Inter,sans-serif;
-    font-size: 28px;
+    font-size: 30px;
+    justify-content: center;
   }
 .buttons{
   align-items: center;
@@ -109,17 +102,23 @@ body {
 .buttons:hover {
   outline: 0;
 }
+.container-timer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  gap: 10px;
+}
 .timer{
   display: flex;
   max-width: 100%;
-  justify-content: center;
-  gap: 10px;
+  
+
 }
 .clock {
   width: 40px;
   height: 40px;
   aspect-ratio: 1;
-  display: flex;
   color: #000;
   border: 2px solid;
   box-sizing: border-box;
