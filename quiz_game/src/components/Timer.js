@@ -30,6 +30,7 @@ export const Timer = ({ onRestart }) => {
 
   return (
     <div>
+      <div className="clock"></div>
       <p>
         {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
       </p>
