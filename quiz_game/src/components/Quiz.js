@@ -1,6 +1,6 @@
 import QuestionList from "./QuestionList";
 import Score from "./Score";
-
+import { Timer } from "./Timer";
 const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, quizFinished, setQuizFinished }) => {
 
     const handleAnswerButtonClick = (selectedAnswer) => {  
@@ -30,8 +30,8 @@ const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, q
                 <span>Question {currentQuestionIndex + 1}  </span>/ 
                 {QuestionList.length}
             </div>
-            <div className="question-display">
-                {QuestionList[currentQuestionIndex].question}
+            <div >
+              <span className="question-display"  >{QuestionList[currentQuestionIndex].question}</span>
             </div>
             <div className="container-buttons">
                 {QuestionList[currentQuestionIndex].options.map((option) =>(
@@ -43,6 +43,7 @@ const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, q
                     </button>
                 ))}
             </div>  
+            <Timer  />
         </div>
       
     );
