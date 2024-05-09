@@ -5,9 +5,141 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    margin: 0;
+  }
+/* .score-board {
+  /* h1 
+   
+    width: 80%;
+    font-size: 30px;
+    padding: 15px;
+    margin: auto;
+  
+    text-align: center;
+  } */
+  .container-buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 200px;
+    justify-content: space-around;
+    align-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+  .restart-buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+    height: 200px;
+    justify-content: space-around;
+    align-content: space-evenly;
+    display: grid;
+    
+
+  }
+  .answer-button,
+  .next-button,
+  .question-display 
+  {
+    width: 600px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px;
+    font-family: Inter,sans-serif;
+    font-size: 28px;
+  }
+.buttons{
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  width: 250px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.buttons:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.buttons:hover:after {
+  transform: translate(0, 0);
+}
+
+.buttons:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.buttons:hover {
+  outline: 0;
+}
+.timer{
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+.clock {
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1;
+  display: flex;
+  color: #000;
+  border: 2px solid;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle 2px, currentColor 95%,#0000),
+    linear-gradient(currentColor 50%,#0000 0) 50%/2px 60% no-repeat;
+  animation: l1 60s infinite linear;
+}
+.clock:before {
+  content: "";
+  flex: 1;
+  background:linear-gradient(currentColor 50%,#0000 0) 50%/2px 80% no-repeat;
+  animation: inherit;
+}
+@keyframes l1 {
+  100% {transform: rotate(1turn)}
+}
+@media (min-width: 768px) {
+  .buttons {
+    padding: 0 40px;
+  }
 }
