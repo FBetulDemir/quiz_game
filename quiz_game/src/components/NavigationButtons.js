@@ -8,8 +8,15 @@ const  NavigationButton = ({currentQuestionIndex, setCurrentQuestionIndex,}) => 
             setCurrentQuestionIndex(nextQuestionIndex);
         }
     };
+    const handlePreviousButtonClick = () => {
+        const previousQuestionIndex = currentQuestionIndex - 1;
+        if (previousQuestionIndex === QuestionList.id){
+            setCurrentQuestionIndex(previousQuestionIndex)
+        }
+    };
     return ( 
         <div className="navigation-buttons">
+            <button onClick={handlePreviousButtonClick} disabled= {QuestionList.length === 0}></button>
             <button onClick={handleNextButtonClick} disabled={QuestionList.id > 10}>Next</button>
         </div>
      );
