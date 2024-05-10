@@ -3,9 +3,7 @@ import Start from './Start'
 
 export function Welcome({ onStartQuiz }) {
   const [userName, setUserName] = useState(''); 
-  const handleNameChange = (newName) => { 
-    setUserName(newName); 
-  };
+  const handleNameChange = (newName) => { setUserName(newName); };
   return (
     <div>
       <Start onNameChange={handleNameChange} />

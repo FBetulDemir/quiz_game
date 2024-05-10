@@ -2,8 +2,6 @@ import { useState } from "react";
 import QuestionList from "./QuestionList";
 import Score from "./Score";
 import { Timer } from "./Timer";
-import NavigationButtons from "./NavigationButtons";
-
 const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, quizFinished, setQuizFinished }) => {
 
     

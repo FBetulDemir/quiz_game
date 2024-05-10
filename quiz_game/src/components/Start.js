@@ -1,16 +1,24 @@
-import { useState } from "react";
+import { useRef } from "react";
 
-export default function Start({ onNameChange }) {
-  const [name, setName] = useState(''); 
-  const handleInputChange = (event) => { 
-    const newName = event.target.value; 
-    setName(newName); 
-    onNameChange(newName); 
+
+
+export default function Start({ setUsername }) {
+  const inputRef = useRef();
+
+  const handleClick = () => {
+    inputRef.current.value && setUsername(inputRef.current.value);
   };
-  
+
   return (
     <div className="start">
-      <input type="text" value={name} onChange={handleInputChange} />
+      <input
+        className="startInput"
+        placeholder="Enter your name"
+        ref={inputRef}
+      />
+      <button className="startButton btn btn-outline-light" onClick={handleClick}>
+        Start
+      </button>
     </div>
   );
 }
