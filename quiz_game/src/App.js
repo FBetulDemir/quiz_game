@@ -4,6 +4,8 @@ import { Buttons } from "./components/Buttons";
 import "./index.css";
 import Start from "./components/Start";
 import { Welcome } from "./components/Welcome";
+import NavigationButton from "./components/NavigationButtons";
+
 
 function App() {
   const [score, setScore] = useState (0);
@@ -23,6 +25,11 @@ function App() {
                   setScore={setScore}
                   setQuizFinished={setQuizFinished}
                   quizFinished={quizFinished}
+            />
+        </div>
+        <div className="navigation-buttons-section">
+            <NavigationButton currentQuestionIndex= {currentQuestionIndex} 
+                              setCurrentQuestionIndex={setCurrentQuestionIndex}
             />
         </div>
       </div>
