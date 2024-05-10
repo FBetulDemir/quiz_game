@@ -1,0 +1,36 @@
+.start{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.startInput{
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 250px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.startButton{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+p{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+}
