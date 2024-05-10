@@ -3,12 +3,16 @@ import Quiz from "./components/Quiz";
 import { Buttons } from "./components/Buttons";
 import "./index.css";
 import NavigationButton from "./components/NavigationButtons";
+import Score from "./components/Score";
 
 function App() {
   const [score, setScore] = useState (0);
   const [quizFinished, setQuizFinished] = useState (false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  if (quizFinished ===true){
+    return <Score score={score}/>
 
+  };
   return (
     <div className="App">
 

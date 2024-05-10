@@ -21,10 +21,7 @@ const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, q
           setQuizFinished(true);
         }
     };
-    if (quizFinished ===true){
-        return <Score score={score}/>
-    
-    }
+
 
     return (
         <div>
