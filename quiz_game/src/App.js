@@ -2,6 +2,7 @@ import {useState} from "react";
 import Quiz from "./components/Quiz";
 import { Buttons } from "./components/Buttons";
 import "./index.css";
+import NavigationButton from "./components/NavigationButtons";
 
 function App() {
   const [score, setScore] = useState (0);
@@ -19,6 +20,11 @@ function App() {
                   setScore={setScore}
                   setQuizFinished={setQuizFinished}
                   quizFinished={quizFinished}
+            />
+        </div>
+        <div className="navigation-buttons-section">
+            <NavigationButton currentQuestionIndex= {currentQuestionIndex} 
+                              setCurrentQuestionIndex={setCurrentQuestionIndex}
             />
         </div>
       </div>
