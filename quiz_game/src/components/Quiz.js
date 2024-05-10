@@ -29,8 +29,6 @@ const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, q
     return (
         <div>
             <div className="score-board">
-                <h1>Quiz App</h1>
-                <>Your current score is : {score}</>
             </div>
             <div className="question-counter">
                 <span>Question {currentQuestionIndex + 1}  </span>/ 

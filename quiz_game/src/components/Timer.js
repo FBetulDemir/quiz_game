@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react";
+import { Buttons } from "./Buttons";
 
 export const Timer = ({ onRestart }) => {
   const initialTime = 5 * 60;
   const [timeRemaining, setTimeRemaining] = useState(initialTime);
+  const [timeIsUp, setTimeIsUp] = useState(false);
   const timerIdRef = useRef(null);
   useEffect(() => {
     const countdown = () => {
@@ -12,6 +14,7 @@ export const Timer = ({ onRestart }) => {
             return prevTime - 1;
           } else {
             clearInterval(timerIdRef.current);
+            setTimeIsUp(true);
             return initialTime;
           }
         });
@@ -25,11 +28,12 @@ export const Timer = ({ onRestart }) => {
   const seconds = timeRemaining % 60;
 
   return (
-    <div>
-      <div className="clock"></div>
-      <p>
+    <div className="container-timer">
+     {!timeIsUp && <div className="clock"></div>}
+     {!timeIsUp && <p>
         {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
-      </p>
+      </p>}
+      {timeIsUp && <Buttons/>} 
     </div>
   );
 };
