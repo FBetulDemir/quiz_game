@@ -1,15 +1,23 @@
-import React, {useState} from 'react'
-import Start from './Start'
+import React, { useState } from "react";
+import Start from "./Start";
 
 export function Welcome({ onStartQuiz }) {
-  const [userName, setUserName] = useState(''); 
-  const handleNameChange = (newName) => { 
-    setUserName(newName); 
+  const [userName, setUserName] = useState("");
+  const handleNameChange = (newName) => {
+    setUserName(newName);
   };
   return (
-    <div>
+    <div className="container-welcome">
+      <div className="h1">
+        <h1>Welcome to Betcace online QUIZ GAME</h1>
+      </div>
+      <div className="p">
+        <p>Hi{userName}!</p>
+      </div>
       <Start onNameChange={handleNameChange} />
-      <p>Hi, {userName}!</p>
-      <h1>Welcome to Betcace online QUIZ GAME</h1>
-      <button onClick={onStartQuiz}>start</button></div>  );
+      <button className="buttons" onClick={onStartQuiz}>
+        Start
+      </button>
+    </div>
+  );
 }

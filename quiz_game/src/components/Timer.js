@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Buttons } from "./Buttons";
+import { CoinFlip } from "./CoinFlip";
 
 export const Timer = ({ onRestart }) => {
   const initialTime = 5 * 60;
@@ -33,7 +33,7 @@ export const Timer = ({ onRestart }) => {
      {!timeIsUp && <p>
         {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
       </p>}
-      {timeIsUp && <Buttons/>} 
+      {timeIsUp && <CoinFlip/>} 
     </div>
   );
 };

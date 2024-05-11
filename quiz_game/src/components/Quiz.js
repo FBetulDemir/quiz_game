@@ -26,14 +26,12 @@ const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, q
 
     return (
         <div>
-            <div className="score-board">
-            </div>
             <div className="question-counter">
-                <span>Question {currentQuestionIndex + 1}  </span>/ 
+                <span>Question {currentQuestionIndex + 1} </span>/ 
                 {QuestionList.length}
             </div>
-            <div >
-              <span className="question-display"  >{QuestionList[currentQuestionIndex].question}</span>
+            <div className="question-display" >
+              <span   >{QuestionList[currentQuestionIndex].question}</span>
             </div>
             <div className="container-buttons">
                 {QuestionList[currentQuestionIndex].options.map((option) =>(

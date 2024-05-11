@@ -9,8 +9,8 @@ export default function Start({ onNameChange }) {
   };
   
   return (
-    <div className="start">
-      <input type="text" value={name} onChange={handleInputChange} />
+    <div>
+      <input className="button-start" type="text" value={name} onChange={handleInputChange} />
     </div>
   );
 }
