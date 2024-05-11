@@ -13,31 +13,11 @@ body {
     height: 100vh; 
     margin: 0;
   }
-  .app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  .button-start{
-    border-radius: 6px;
-    height: 25px;
-    width: 15rem;
-    margin-bottom:25px;
-  }
-  h1{
-    display: flex;
-    text-align: center;
-    font-family: Inter,sans-serif;
-    font-family: 20px;
-    
-  }
-.question-display,
-.question-counter {
-    display: flex;
-    width: 100%;
-    font-size: 25px;
+/* .score-board {
+  /* h1 
+   
+    width: 80%;
+    font-size: 30px;
     padding: 15px;
     margin: auto;
   
@@ -47,35 +27,13 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 100%;
+    width: 600px;
     height: 200px;
     justify-content: space-around;
     align-content: space-evenly;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-  }
-  .container-welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Esto es opcional, ajusta la altura según tus necesidades */
-  }
-  
-  .container-welcome .buttons {
-    margin-top: 20px; /* Espacio entre el mensaje de bienvenida y el botón */
-  }
-  .container-welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Esto es opcional, ajusta la altura según tus necesidades */
-  }
-  
-  .container-welcome .buttons {
-    margin-top: 20px; /* Espacio entre el mensaje de bienvenida y el botón */
   }
   .restart-buttons {
     display: flex;
@@ -89,8 +47,10 @@ body {
     
 
   }
-  .answer-button{
-    display: flex;
+  .answer-button,
+  .next-button,
+  .question-display 
+  {
     width: 600px;
     font-weight: bold;
     padding: 10px;
@@ -122,7 +82,7 @@ body {
   touch-action: manipulation;
 }
 
-.buttons:after{
+.buttons:after {
   background-color: #111;
   border-radius: 8px;
   content: "";
@@ -137,7 +97,7 @@ body {
   z-index: -1;
 }
 
-.buttons:hover:after{
+.buttons:hover:after {
   transform: translate(0, 0);
 }
 
@@ -149,21 +109,11 @@ body {
 .buttons:hover {
   outline: 0;
 }
-.container-timer{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 15px;
-  gap: 10px;
-  margin-top: 24px;
-
-}
 .timer{
   display: flex;
   max-width: 100%;
-  color: #000;
-  
-  
+  justify-content: center;
+  gap: 10px;
 }
 .clock {
   width: 40px;
@@ -188,38 +138,8 @@ body {
 @keyframes l1 {
   100% {transform: rotate(1turn)}
 }
-
-@media (max-width: 768px) {
-  .button-start {
-    width: 12rem;
+@media (min-width: 768px) {
+  .buttons {
+    padding: 0 40px;
   }
-  .answer-button {
-    width: 200px;
-  }
-  .question-display
-  .question-counter {
-    font-size: 20px;
-  }
-}
- 
-@media (max-width: 576px) {
-  .container-buttons {
-    display: block;
-  }
-   .p,
-  .buttons,
-  .button-start {
-    margin-bottom: 15px;
-    margin-left: 14px; 
-    }
- 
-  .question-display,
-  .question-counter {
-    font-size: 20px;
-    align-items: center;
-  }
-  .container-welcome h1 {
-    font-size: 18px; 
-}
-
 }

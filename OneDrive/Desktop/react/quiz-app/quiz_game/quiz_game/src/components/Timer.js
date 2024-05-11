@@ -1,10 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { CoinFlip } from "./CoinFlip";
 
 export const Timer = ({ onRestart }) => {
   const initialTime = 5 * 60;
   const [timeRemaining, setTimeRemaining] = useState(initialTime);
-  const [timeIsUp, setTimeIsUp] = useState(false);
   const timerIdRef = useRef(null);
   useEffect(() => {
     const countdown = () => {
@@ -14,7 +12,6 @@ export const Timer = ({ onRestart }) => {
             return prevTime - 1;
           } else {
             clearInterval(timerIdRef.current);
-            setTimeIsUp(true); 
             return initialTime;
           }
         });
@@ -33,7 +30,6 @@ export const Timer = ({ onRestart }) => {
       <p>
         {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
       </p>
-      {timeIsUp && <CoinFlip/>} 
     </div>
   );
 };
