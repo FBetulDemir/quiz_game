@@ -35,20 +35,20 @@ body {
   }
 .question-display,
 .question-counter {
-    display: flex;
     width: 100%;
     font-size: 25px;
     padding: 15px;
     margin: auto;
   
     text-align: center;
-  } */
+  } 
   .container-buttons {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: 20px;
     width: 100%;
-    height: 200px;
+    height: 150px;
     justify-content: space-around;
     align-content: space-evenly;
     display: grid;
@@ -60,22 +60,22 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Esto es opcional, ajusta la altura según tus necesidades */
+    height: 100vh;
   }
   
   .container-welcome .buttons {
-    margin-top: 20px; /* Espacio entre el mensaje de bienvenida y el botón */
+    margin-top: 20px; 
   }
   .container-welcome {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Esto es opcional, ajusta la altura según tus necesidades */
+    height: 100vh; 
   }
   
   .container-welcome .buttons {
-    margin-top: 20px; /* Espacio entre el mensaje de bienvenida y el botón */
+    margin-top: 20px; 
   }
   .restart-buttons {
     display: flex;
@@ -159,17 +159,18 @@ body {
 
 }
 .timer{
+  margin-top: 20px;
   display: flex;
+  justify-content: center;
   max-width: 100%;
   color: #000;
-  
+  gap: 10px;
   
 }
 .clock {
   width: 40px;
   height: 40px;
   aspect-ratio: 1;
-  display: flex;
   color: #000;
   border: 2px solid;
   box-sizing: border-box;
