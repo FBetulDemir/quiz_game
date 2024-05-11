@@ -4,16 +4,17 @@
     border-radius: 0.25rem 0.25rem 0 0;
     cursor: pointer;
     font-family: "Quicksand", sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    height: 2.6rem;
+    font-size: 0.99rem;
+    font-weight: 1000;
+    height: 2.9rem;
+    margin-top: 2em;
     margin-bottom: -4rem;
     outline: 0;
     position: relative;
     top: 0;
     transform-origin: 0% 100%;
     transition: transform 50ms ease-in-out;
-    width: 9.5rem;
+    width: 14.rem;
     -webkit-tap-highlight-color: transparent;
   }
   .tip-button:active {
@@ -32,7 +33,7 @@
     width: 60%;
   }
   .tip-button.clicked .coin {
-    transition: margin-bottom 1s linear 200ms;
+    transition: margin-bottom cubic-bezier(0.175, 0.885, 0.32, 1.275) linear 200ms;
     margin-bottom: 0;
   }
   .tip-button.shrink-landing::before {
@@ -61,7 +62,7 @@
     z-index: 3;
   }
   .tip-button::before {
-    background: #abaeb5;
+    background-color: #fee6e3;
     border-radius: 8px;
     border: 2px solid #111;
     bottom: 0;
@@ -117,13 +118,13 @@
     --shine-opacity-multiplier: 0.4;
     --shine-bg-multiplier: 50%;
     bottom: calc(var(--coin-y-multiplier) * 1rem - 3.5rem);
-    height: 3.5rem;
-    margin-bottom: 3.05rem;
+    height: 2.70rem;
+    margin-bottom: 4.4rem;
     position: absolute;
     right: calc(var(--coin-x-multiplier) * 34% + 16%);
     transform: translateX(50%) scale(calc(0.4 + var(--coin-scale-multiplier))) rotate(calc(var(--coin-rotation-multiplier) * -1deg));
     transition: opacity 100ms linear 200ms;
-    width: 3.5rem;
+    width: 2.9rem;
     z-index: 3;
   }
   .coin__front, .coin__middle, .coin__back, .coin::before, .coin__front::after, .coin__back::after {

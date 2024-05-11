@@ -1,8 +1,6 @@
 import {useState} from "react";
 import Quiz from "./components/Quiz";
-import { Buttons } from "./components/Buttons";
 import "./index.css";
-import Start from "./components/Start";
 import { Welcome } from "./components/Welcome";
 
 import NavigationButton from "./components/NavigationButtons";
@@ -39,7 +37,7 @@ function App() {
        )}
     
 
-      
+
     </div>
   );
 }
