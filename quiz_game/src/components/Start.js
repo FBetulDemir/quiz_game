@@ -11,7 +11,6 @@ export default function Start({ onNameChange }) {
   const inputRef = useRef();
 
   const handleClick = () => {
-   // inputRef.current.value && setUsername(inputRef.current.value);
   };
 
   return (
