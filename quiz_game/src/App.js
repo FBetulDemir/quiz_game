@@ -4,13 +4,12 @@ import "./index.css";
 import { Welcome } from "./components/Welcome";
 
 import NavigationButton from "./components/NavigationButtons";
-
-
 function App() {
   const [score, setScore] = useState (0);
   const [quizFinished, setQuizFinished] = useState (false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-
+  const [showQuiz, setShowQuiz] = useState(false); 
+  const handleStartQuiz =() => { setShowQuiz(true); };
   return (
     <div className="App">
       {showQuiz ?
