@@ -1,6 +1,15 @@
-import React, { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 import './CoinFlip.css'
 export const CoinFlip = () => {
+  const [restartKey, setRestartKey] = useState(0);
+    
+  const handleRestart = () => {
+      setRestartKey((prevKey) => prevKey + 1);
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    };
+  
     useEffect(() => {
         const tipButtons = document.querySelectorAll('.tip-button');
     
@@ -108,8 +117,8 @@ export const CoinFlip = () => {
       }, []);
     
       return (
-        <button className="tip-button">
-          <span className="tip-button__text">GAME OVER</span>
+        <button className="tip-button" onClick={handleRestart}  >
+          <span className="tip-button__text">TRY AGAIN</span>
           <div className="coin-wrapper">
             <div className="coin">
               <div className="coin__middle"></div>

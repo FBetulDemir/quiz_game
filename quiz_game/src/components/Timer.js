@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Buttons } from "./Buttons";
+import { CoinFlip } from "./CoinFlip";
 
 export const Timer = ({ onRestart }) => {
   const initialTime = 5 * 60;
@@ -14,7 +14,7 @@ export const Timer = ({ onRestart }) => {
             return prevTime - 1;
           } else {
             clearInterval(timerIdRef.current);
-            setTimeIsUp(true);
+            setTimeIsUp(true); 
             return initialTime;
           }
         });
@@ -28,12 +28,12 @@ export const Timer = ({ onRestart }) => {
   const seconds = timeRemaining % 60;
 
   return (
-    <div className="container-timer">
-     {!timeIsUp && <div className="clock"></div>}
-     {!timeIsUp && <p>
+    <div className="timer">
+      <div className="clock"></div>
+      <p>
         {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
-      </p>}
-      {timeIsUp && <Buttons/>} 
+      </p>
+      {timeIsUp && <CoinFlip/>} 
     </div>
   );
 };

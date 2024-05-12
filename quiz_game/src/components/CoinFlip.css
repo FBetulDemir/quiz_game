@@ -7,13 +7,14 @@
     font-size: 0.99rem;
     font-weight: 1000;
     height: 2.9rem;
+    margin-top: 2em;
     margin-bottom: -4rem;
     outline: 0;
     position: relative;
     top: 0;
     transform-origin: 0% 100%;
     transition: transform 50ms ease-in-out;
-    width: 10.rem;
+    width: 14.rem;
     -webkit-tap-highlight-color: transparent;
   }
   .tip-button:active {
@@ -26,14 +27,13 @@
   .tip-button.clicked .tip-button__text {
     opacity: 0;
     transition: opacity 100ms linear 200ms;
-   
   }
   .tip-button.clicked::before {
     height: 0.5rem;
     width: 60%;
   }
   .tip-button.clicked .coin {
-    transition: margin-bottom 1s linear 200ms;
+    transition: margin-bottom cubic-bezier(0.175, 0.885, 0.32, 1.275) linear 200ms;
     margin-bottom: 0;
   }
   .tip-button.shrink-landing::before {
@@ -54,7 +54,7 @@
     transform: scale(2) translateY(-10px);
   }
   .tip-button__text {
-    color: #111;
+    color: #fff;
     margin-right: 1.8rem;
     opacity: 1;
     position: relative;
@@ -62,7 +62,7 @@
     z-index: 3;
   }
   .tip-button::before {
-    background: #abaeb5;
+    background-color: #fee6e3;
     border-radius: 8px;
     border: 2px solid #111;
     bottom: 0;
@@ -79,7 +79,7 @@
   .tip-button::after {
     bottom: -1rem;
     color: #323234;
-    content: "THANK YOU!";
+    content: "Thank you!";
     height: 190%;
     left: 0;
     opacity: 0;
@@ -92,12 +92,13 @@
     width: 100%;
     z-index: 1;
   }
+  
   .coin-wrapper {
     background: none;
     bottom: 0;
     height: 18rem;
     left: 0;
-    opacity: 2;
+    opacity: 1;
     overflow: hidden;
     pointer-events: none;
     position: absolute;
@@ -105,8 +106,8 @@
     transform-origin: 50% 100%;
     transition: opacity 200ms linear 100ms, transform 300ms ease-out;
     width: 100%;
-
   }
+  
   .coin {
     --front-y-multiplier: 0;
     --back-y-multiplier: 0;
@@ -117,13 +118,13 @@
     --shine-opacity-multiplier: 0.4;
     --shine-bg-multiplier: 50%;
     bottom: calc(var(--coin-y-multiplier) * 1rem - 3.5rem);
-    height: 3.70rem;
+    height: 2.70rem;
     margin-bottom: 4.4rem;
     position: absolute;
     right: calc(var(--coin-x-multiplier) * 34% + 16%);
     transform: translateX(50%) scale(calc(0.4 + var(--coin-scale-multiplier))) rotate(calc(var(--coin-rotation-multiplier) * -1deg));
     transition: opacity 100ms linear 200ms;
-    width: 3.9rem;
+    width: 2.9rem;
     z-index: 3;
   }
   .coin__front, .coin__middle, .coin__back, .coin::before, .coin__front::after, .coin__back::after {
@@ -145,7 +146,6 @@
     background: rgba(0, 0, 0, 0.2);
     content: "";
     opacity: var(--front-y-multiplier);
-   
   }
   .coin__middle {
     background: #737c99;
