@@ -1,11 +1,11 @@
-.start{
+.start {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
 }
 
-.startInput{
+.startInput {
   margin-bottom: 10px;
   padding: 8px;
   width: 250px;
@@ -15,7 +15,7 @@
   font-size: 18px;
 }
 
-.startButton{
+.startButton {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -26,7 +26,7 @@
   cursor: pointer;
 }
 
-p{
+p {
   display: flex;
   flex-direction: column;
   align-items: center;
