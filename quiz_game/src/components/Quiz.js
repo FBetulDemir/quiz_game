@@ -2,29 +2,29 @@ import QuestionList from "./QuestionList";
 import Score from "./Score";
 import { Timer } from "./Timer";
 
-const Quiz = ({
-  currentQuestionIndex,
-  setCurrentQuestionIndex,
-  setScore,
-  score,
-  quizFinished,
-  setQuizFinished,
-}) => {
-  const handleAnswerButtonClick = (selectedAnswer) => {
-    if (selectedAnswer === QuestionList[currentQuestionIndex].answer) {
-      setScore(score + 1);
-    }
+const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, quizFinished, setQuizFinished }) => {
 
-    const nextQuestionIndex = currentQuestionIndex + 1;
-    if (nextQuestionIndex < QuestionList.length) {
-      setCurrentQuestionIndex(nextQuestionIndex);
-    } else {
-      setQuizFinished(true);
-    }
-  };
-  if (quizFinished === true) {
-    return <Score score={score} />;
-  }
+    
+
+    const handleAnswerButtonClick = (selectedAnswer) => {  
+        if (selectedAnswer === QuestionList[currentQuestionIndex].answer) {
+          setScore (score + 1);
+          
+        };
+    
+        const nextQuestionIndex = currentQuestionIndex + 1;
+        if (nextQuestionIndex < QuestionList.length) {
+          setCurrentQuestionIndex(nextQuestionIndex);
+        } else {
+          setQuizFinished(true);
+        }
+    };
+    if (quizFinished ===true){
+      return <Score score={score}/>
+  
+    };
+
+   
 
   return (
     <div className="quiz">
