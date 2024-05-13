@@ -84,8 +84,6 @@ body {
     font-size: 28px;
   }
  
-
- 
   .navigation-buttons,
   .navigation-buttons2{
     display: flex;
@@ -161,7 +159,7 @@ body {
 .buttons:hover {
   outline: 0;
 }
- .container-navigation,
+.container-navigation,
 .container-timer{
   display: flex;
   justify-content: center;

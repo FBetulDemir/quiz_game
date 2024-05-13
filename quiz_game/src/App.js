@@ -1,8 +1,8 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import Quiz from "./components/Quiz";
 import "./index.css";
 import { Welcome } from "./components/Welcome";
-
+import mainImage from "./assets/img.jpg"
 import NavigationButton from "./components/NavigationButtons";
 function App() {
   const [score, setScore] = useState (0);
@@ -10,6 +10,17 @@ function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showQuiz, setShowQuiz] = useState(false); 
   const handleStartQuiz =() => { setShowQuiz(true); };
+  useEffect(() => {
+
+    document.body.style.backgroundImage = `url(${mainImage})`;
+    document.body.style.backgroundSize = "contain";
+    document.body.style.backgroundRepeat = "repeat";
+
+    return () => {
+      
+      document.body.style.backgroundImage = "none";
+    };
+  }, [showQuiz]);
   return (
     <div className="App">
       {showQuiz ?

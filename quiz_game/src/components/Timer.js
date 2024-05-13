@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { CoinFlip } from "./CoinFlip";
+import timesupImage from "../assets/Time-is-up.jpg"
 
 export const Timer = ({ onRestart }) => {
   const initialTime = 5 * 60;
   const [timeRemaining, setTimeRemaining] = useState(initialTime);
   const [timeIsUp, setTimeIsUp] = useState(false);
   const timerIdRef = useRef(null);
+  
   useEffect(() => {
     const countdown = () => {
       timerIdRef.current = setInterval(() => {
@@ -15,6 +17,7 @@ export const Timer = ({ onRestart }) => {
           } else {
             clearInterval(timerIdRef.current);
             setTimeIsUp(true); 
+            document.body.style.backgroundImage = `url(${timesupImage})`; 
             return initialTime;
           }
         });
@@ -29,7 +32,7 @@ export const Timer = ({ onRestart }) => {
 
   return (
     <div className="container-timer">
-    <div className="timer">
+    <div  className="timer" >
       <div className="clock"></div>
       </div>
       <p>
