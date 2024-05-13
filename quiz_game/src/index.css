@@ -39,7 +39,6 @@ body {
     font-size: 25px;
     padding: 15px;
     margin: auto;
-  
     text-align: center;
   } 
   .container-buttons {
@@ -60,17 +59,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-  }
-  
-  .container-welcome .buttons {
-    margin-top: 20px; 
-  }
-  .container-welcome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh; 
   }
   
@@ -81,13 +69,10 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-   
     height: 200px;
     justify-content: space-around;
     align-content: space-evenly;
     display: grid;
-    
-
   }
   .answer-button{
     display: flex;
@@ -98,6 +83,33 @@ body {
     font-family: Inter,sans-serif;
     font-size: 28px;
   }
+ 
+
+ 
+  .navigation-buttons,
+  .navigation-buttons2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 65px;
+    height: 30px;
+    font-family: Inter,sans-serif;
+    border: 2px solid #111;
+    background-color: #ffdeda;
+    border-radius:6px;
+    transition: transform .4s ease-out;
+    gap: 20px;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .navigation-buttons:hover,
+  .navigation-buttons2:hover{
+    transform: translate(5px, 10px); 
+  }
+
+  
 .buttons{
   align-items: center;
   background-color: #fee6e3;
@@ -109,7 +121,7 @@ body {
   display: flex;
   font-family: Inter,sans-serif;
   font-size: 16px;
-  height: 48px;
+  height: 40px;
   justify-content: center;
   line-height: 24px;
   width: 250px;
@@ -127,7 +139,7 @@ body {
   border-radius: 8px;
   content: "";
   display: block;
-  height: 48px;
+  height: 40px;
   left: 0;
   width: 100%;
   position: absolute;
@@ -149,17 +161,17 @@ body {
 .buttons:hover {
   outline: 0;
 }
+ .container-navigation,
 .container-timer{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 15px;
+  padding: 30px;
   gap: 10px;
-  margin-top: 24px;
-
+  margin-top: 40px;
+ 
 }
 .timer{
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   max-width: 100%;
@@ -196,6 +208,7 @@ body {
   }
   .answer-button {
     width: 200px;
+    
   }
   .question-display
   .question-counter {
@@ -221,6 +234,12 @@ body {
   }
   .container-welcome h1 {
     font-size: 18px; 
+}
+.navigation-buttons{
+  display: block;
+}
+ .answer-button{
+  font-size: 10px;
 }
 
 }

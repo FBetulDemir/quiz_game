@@ -15,9 +15,9 @@ const  NavigationButton = ({currentQuestionIndex, setCurrentQuestionIndex,}) => 
         }
     };
     return ( 
-        <div className="navigation-buttons">
-            <button onClick={handlePreviousButtonClick} disabled= {QuestionList.length === 0}>Previous</button>
-            <button onClick={handleNextButtonClick} disabled={QuestionList.id > 10}>Next</button>
+        <div className="container-navigation">
+            <button className="navigation-buttons" onClick={handlePreviousButtonClick} disabled= {QuestionList.length === 0}>Previous</button>
+            <button className="navigation-buttons2" onClick={handleNextButtonClick} disabled={QuestionList.id > 10}>Next</button>
         </div>
      );
 }
