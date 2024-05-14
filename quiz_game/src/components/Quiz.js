@@ -1,8 +1,6 @@
-import { useState } from "react";
 import QuestionList from "./QuestionList";
 import Score from "./Score";
 import { Timer } from "./Timer";
-import NavigationButtons from "./NavigationButtons";
 
 const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, quizFinished, setQuizFinished }) => {
 
@@ -26,29 +24,30 @@ const Quiz = ({currentQuestionIndex, setCurrentQuestionIndex, setScore, score, q
   
     };
 
-    return (
-        <div>
-            <div className="question-counter">
-                <span>Question {currentQuestionIndex + 1} </span>/ 
-                {QuestionList.length}
-            </div>
-            <div className="question-display" >
-              <span   >{QuestionList[currentQuestionIndex].question}</span>
-            </div>
-            <div className="container-buttons">
-                {QuestionList[currentQuestionIndex].options.map((option) =>(
-                    <button 
-                        className="buttons"
-                        key={option}
-                        onClick={()=> handleAnswerButtonClick(option)}>
-                        {option}  
-                    </button>
-                ))}
-            </div>  
-            <Timer  />
-        </div>
-      
-    );
-}
- 
+   
+
+  return (
+    <div className="quiz">
+      <div className="question-counter">
+        <span>Question {currentQuestionIndex + 1} </span>/{QuestionList.length}
+      </div>
+      <div className="question-display">
+        <span>{QuestionList[currentQuestionIndex].question}</span>
+      </div>
+      <div className="container-buttons">
+        {QuestionList[currentQuestionIndex].options.map((option) => (
+          <button
+            className="buttons"
+            key={option}
+            onClick={() => handleAnswerButtonClick(option)}
+          >
+            {option}
+          </button>
+        ))}
+      </div>
+      <Timer />
+    </div>
+  );
+};
+
 export default Quiz;

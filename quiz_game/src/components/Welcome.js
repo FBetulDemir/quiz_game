@@ -6,6 +6,7 @@ export function Welcome({ onStartQuiz }) {
   const handleNameChange = (newName) => {
     setUserName(newName);
   };
+
   return (
     <div className="container-welcome">
       <div className="h1">
